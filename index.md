@@ -18,7 +18,7 @@ We'll also be supported in lab classes by [Maisy Hallam](https://maisyhallam.git
 
 ## Class times
 
-Lectures take place on Mondays, 11:10-12, in room XX, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesdays, 12.10-14.00, in room XX [Appleton Tower](https://www.ed.ac.uk/maps/maps?building=0201); this is an open-plan Teaching Studio on the mezzanine level. 
+Lectures take place on Mondays, 11.10-12.00, in room XX, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesdays, 12.10-14.00, in room XX [Appleton Tower](https://www.ed.ac.uk/maps/maps?building=0201); this is an open-plan Teaching Studio on the mezzanine level. 
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
@@ -116,7 +116,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk9.md)
 - [Lecture slides](slides/oels_lecture_wk9.pdf) -->
 
-### Week 10 (17th November): Interacting with servers and recruitment sites
+### Week 10 (17th November): Interacting with servers and crowdsourcing sites
 
 No lecture or lab in week 10, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
