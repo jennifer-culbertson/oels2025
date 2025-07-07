@@ -9,7 +9,7 @@ Note that postgraduate students do not do this assessment.
 
 ### Have you got any examples we could look at?
 
-Yes! Here are the top 2 assignments from last year's class, plus the marker notes, kindly provided with approval by their authors. I have made redactions so you can't see the student names, and I have also redacted the entry for one article entirely, since it comes from the assignment reading list and you might want to review that article yourself. *Do not provide a review of the articles covered in these example assignments in your own assignment* - they are quite idiosyncratic, which is why I am happy to share, you should find your own papers to cover, or pick stuff from the course reading list. [Example 1](AnnotatedBibliographyExample1.pdf). [Example 2](AnnotatedBibliographyExample2.pdf). The marks they got for each entry are at the end - note that the second example got a low-ish mark for their first entry, so you can compare how that differs from the more successful entries.
+Yes! Here are the top 2 assignments from the 2023 class, plus the marker notes, kindly provided with approval by their authors. I have made redactions so you can't see the student names, and I have also redacted the entry for one article entirely, since it comes from the assignment reading list and you might want to review that article yourself. *Do not provide a review of the articles covered in these example assignments in your own assignment* - they are quite idiosyncratic, which is why I am happy to share, you should find your own papers to cover, or pick stuff from the course reading list. [Example 1](AnnotatedBibliographyExample1.pdf). [Example 2](AnnotatedBibliographyExample2.pdf). The marks they got for each entry are at the end - note that the second example got a low-ish mark for their first entry, so you can compare how that differs from the more successful entries.
 
 ### What do you mean "For articles which are particularly relevant to your (current) plan for Assessment 2, highlight its relevance and how it has shaped your thinking."
 
@@ -39,7 +39,7 @@ Yes definitely!
 
 ### Have you got any examples we could look at?
 
-Yes! Here are 2 high-scoring assignments from last year's class, plus the marker notes, kindly provided with approval by their authors. I have made redactions so you can't see the student names or other identifying information, which means I had to take out the URLs for their experiments (which include student numbers) - so I copied their code over to my jspsychlearning profile, URLs below. The marks they are at the end of the report. Note that these reports are longer than the word limit for the postgraduate assignment this year.
+Yes! Here are 2 high-scoring assignments from the 2023 class, plus the marker notes, kindly provided with approval by their authors. I have made redactions so you can't see the student names or other identifying information, which means I had to take out the URLs for their experiments (which include student numbers) - so I copied their code over to my jspsychlearning profile, URLs below. The marks they are at the end of the report. Note that these reports are longer than the word limit for the postgraduate assignment this year.
 - [Example 1 report](ProgrammingReportExample1.pdf). [Example 1 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example1/Example1.html)
 - [Example 2 report](ProgrammingReportExample2.pdf). [Example 2 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example2/Example2.html).
 
