@@ -63,66 +63,66 @@ Each week there will be a set reading and a programming assignment. The reading 
 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
-- [Reading](oels_reading_wk3.md)
+<!-- - [Reading](oels_reading_wk3.md)
 - [Programming task](oels_practical_wk3.md)
-- [Lecture slides](slides/oels_lecture_wk3.pdf)
+- [Lecture slides](slides/oels_lecture_wk3.pdf) -->
 
 ### Week 4 (6th October): Self-paced reading
 
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, more complex nested trials
-- [Reading](oels_reading_wk4.md)
+<!-- - [Reading](oels_reading_wk4.md)
 - [Programming task](oels_practical_wk4.md)
-- [Lecture slides](slides/oels_lecture_wk4.pdf)
+- [Lecture slides](slides/oels_lecture_wk4.pdf) -->
 
 
 ### Week 5 (13th October): Word learning / frequency learning
 
 - *Scientific content:* probability matching and regularisation
 - *Technical content:* using trial data for contingent trials, saving data
-- [Reading](oels_reading_wk5.md)
+<!-- - [Reading](oels_reading_wk5.md)
 - [Programming task](oels_practical_wk5.md)
-- [Lecture slides](slides/oels_lecture_wk5.pdf)
+- [Lecture slides](slides/oels_lecture_wk5.pdf) -->
 
 ### Week 6 (20th October): Audio stimuli
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Audio, trial data again, preloading stimuli, saving data trial by trial
-- [Reading](oels_reading_wk6.md)
+<!-- - [Reading](oels_reading_wk6.md)
 - [Programming task](oels_practical_wk6.md)
-- [Lecture slides](slides/oels_lecture_wk6.pdf)
+- [Lecture slides](slides/oels_lecture_wk6.pdf) -->
 
 ### Week 7 (27th October): Priming and overspecification
 
 - *Scientific content:* Priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, conditional timelines, reading trial lists from CSV
-- [Reading](oels_reading_wk7.md)
+<!-- - [Reading](oels_reading_wk7.md)
 - [Programming task](oels_practical_wk7.md)
-- [Lecture slides](slides/oels_lecture_wk7.pdf)
+- [Lecture slides](slides/oels_lecture_wk7.pdf) -->
 
 ### Week 8 (3rd November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
-- [Reading](oels_reading_wk8.md)
+<!-- - [Reading](oels_reading_wk8.md)
 - [Programming task](oels_practical_wk8.md)
-- [Lecture slides](slides/oels_lecture_wk8.pdf)
+- [Lecture slides](slides/oels_lecture_wk8.pdf) -->
 
 ### Week 9 (10th November): Participant-to-participant interaction
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
-- [Reading](oels_reading_wk9.html)
+<!-- - [Reading](oels_reading_wk9.html)
 - [Programming task](oels_practical_wk9.md)
-- [Lecture slides](slides/oels_lecture_wk9.pdf)
+- [Lecture slides](slides/oels_lecture_wk9.pdf) -->
 
-### Week 10 (17th November): Interacting with MTurk
+### Week 10 (17th November): Interacting with servers and recruitment sites
 
 No lecture or lab in week 10, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
 - *Scientific content:* None!
-- *Technical content:* How to set up a server, launch and pay participants, manage qualifications, etc
-- [How to get your experiment online](oels_wk10.md)
+- *Technical content:* How to set up a server, launch and pay participants on Prolific and MTurk, etc.
+<!-- - [How to get your experiment online](oels_wk10.md) -->
 
 
 ### Bonus content
