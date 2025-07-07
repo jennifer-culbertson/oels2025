@@ -1,6 +1,6 @@
-This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2024/2025. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
+This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2025/2024. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
 
-**For non-Edinburgh people**: all the course materials are here and you are welcome to use them with attribution. If you would like us to run something like this for your students or research group, [contact Kenny](mailto:kenny.smith@ed.ac.uk).
+**For non-Edinburgh people**: all the course materials are here and you are welcome to use them with attribution. If you would like us to run something like this for your students or research group, [contact Jenny](mailto:jennifer.culbertson@ed.ac.uk). Please note that this course was designed and created by [Kenny Smith](http://www.lel.ed.ac.uk/~kenny/), but he is on sabbatical this year.
 
 ## Course summary
 
@@ -12,13 +12,13 @@ No prior experience in coding is assumed, but you have to be prepared to dive in
 
 ## The teaching team
 
-The course is co-taught by [Kenny Smith](http://www.lel.ed.ac.uk/~kenny/) and [Alisdair Tullo](https://www.ed.ac.uk/profile/alisdair-tullo/). Kenny (that's me) is the main lecturer and the course organiser; Alisdair is the PPLS javascript/jsPsych guru and delivers the lab sessions with Kenny. Best way to get in touch with us is in one of the live sessions, see below, or by email to [kenny.smith@ed.ac.uk](mailto:kenny.smith@ed.ac.uk) or [alisdair.tullo@ed.ac.uk](mailto:alisdair.tullo@ed.ac.uk).
+The course is co-taught by [Jenny Culbertson](https://jennifer-culbertson.github.io/), [Shira Tal](https://sites.google.com/view/shiratal/) and [Alisdair Tullo](https://www.ed.ac.uk/profile/alisdair-tullo/). Jenny (that's me) is the main lecturer and the course organiser; Alisdair is the PPLS javascript/jsPsych guru and delivers the lab sessions with Jenny and/or the course tutors. Best way to get in touch with us is in one of the live sessions, see below, or by email to [jennifer.culbertson@ed.ac.uk](mailto:jennifer.culbertson@ed.ac.uk) or [alisdair.tullo@ed.ac.uk](mailto:alisdair.tullo@ed.ac.uk).
 
-We'll also be supported in lab classes by [Maisy Hallam](https://maisyhallam.github.io) and [Yajun Liu](https://yliu820.github.io/liuyajun/), who are doing their PhDs with me and use jsPsych to build online experiments for their own research.  
+We'll also be supported in lab classes by [Maisy Hallam](https://maisyhallam.github.io) and Shuya Chen, who are doing their PhDs at Edinburgh and use jsPsych to build online experiments for their own research.  
 
 ## Class times
 
-Lectures take place on Monday mornings, 9am-9.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, in room M2 [Appleton Tower](https://www.ed.ac.uk/maps/maps?building=0201); this is an open-plan Teaching Studio on the mezzanine level. 
+Lectures take place on Mondays, 11:10-12, in room XX, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesdays, 12.10-14.00, in room XX [Appleton Tower](https://www.ed.ac.uk/maps/maps?building=0201); this is an open-plan Teaching Studio on the mezzanine level. 
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
@@ -31,11 +31,11 @@ There are different assessments for undergraduates and postgraduates.
 
 ### Undergraduate assessment 
 
-The undergraduate version of the course is worth 20 credits and there are two pieces of assessment, due on 7th November and 5th December. Assessment 1 is an annotated bibliography reviewing and evaluating 4 articles typically drawn from the course set readings. Assessment 2 is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [undergraduate assignment brief](assessment/UGAssignmentBrief2024.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
+The undergraduate version of the course is worth 20 credits and there are two pieces of assessment, due on 7th November and 5th December. Assessment 1 is an annotated bibliography reviewing and evaluating 4 articles typically drawn from the course set readings. Assessment 2 is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [undergraduate assignment brief](assessment/UGAssignmentBrief2025.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
 
 ### Postgraduate assessment
 
-The postgraduate version of the course is worth 10 credits and there is a single piece of assessment, due on 5th December. This assessment is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [postgraduate assignment brief](assessment/PGAssignmentBrief2024.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
+The postgraduate version of the course is worth 10 credits and there is a single piece of assessment, due on 5th December. This assessment is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [postgraduate assignment brief](assessment/PGAssignmentBrief2025.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
 
 ## Course Materials
 
@@ -43,7 +43,7 @@ Course content will appear here as we work through the course.
 
 Each week there will be a set reading and a programming assignment. The reading involves a blog post introducing a published paper, you read both the blog and the paper, the lecture then provides an additional brief overview and an opportunity to ask questions/discuss the reading. The programming assignment involves working through a section of the [Online Experiments with jsPsych](https://softdev.ppls.ed.ac.uk/online_experiments/index.html) tutorial and/or looking at (and editing) some code which implements a language-related experiment; you can use the lab classes as dedicated time to work on the programming task and get help with programming difficulties or questions you have.
 
-### Week 1 (commencing 16th September): Introduction
+### Week 1 (commencing 15th September): Introduction
 
 - *Scientific content:* minimal (but I'll go over the practicalities of the course, assessments etc)
 - *Technical content:* jsPsych basics
@@ -51,7 +51,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk1.md)
 - [Lecture slides](slides/oels_lecture_wk1.pdf)
 
-### Week 2 (23rd September): Crowdsourcing experimental data
+### Week 2 (22nd September): Crowdsourcing experimental data
 
 - *Scientific content:* lab vs online data collection
 - *Technical content:* more jsPsych and javascript basics
@@ -59,7 +59,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk2.md)
 - [Lecture slides](slides/oels_lecture_wk2.pdf)
 
-### Week 3 (30th September): Grammaticality judgements
+### Week 3 (29th September): Grammaticality judgements
 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
@@ -67,7 +67,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk3.md)
 - [Lecture slides](slides/oels_lecture_wk3.pdf)
 
-### Week 4 (7th October): Self-paced reading
+### Week 4 (6th October): Self-paced reading
 
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, more complex nested trials
@@ -100,7 +100,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk7.md)
 - [Lecture slides](slides/oels_lecture_wk7.pdf)
 
-### Week 8 (4th November): Iterated Learning
+### Week 8 (3rd November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
@@ -108,7 +108,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk8.md)
 - [Lecture slides](slides/oels_lecture_wk8.pdf)
 
-### Week 9 (11th November): Participant-to-participant interaction
+### Week 9 (10th November): Participant-to-participant interaction
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
@@ -116,7 +116,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk9.md)
 - [Lecture slides](slides/oels_lecture_wk9.pdf)
 
-### Week 10 (18th November): Interacting with MTurk
+### Week 10 (17th November): Interacting with MTurk
 
 No lecture or lab in week 10, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
@@ -127,7 +127,7 @@ No lecture or lab in week 10, but there are some materials that will be useful f
 
 ### Bonus content
 
-I am sticking some extra documented experiments I have created here, in case they are useful for someone or provide inspiration.
+I am sticking some extra documented experiments, in case they are useful for someone or provide inspiration.
 
 - [Co-speech gesture experiment](bonus/cospeech_gesture.md), presenting a video and getting button/text responses.
 - [Semantic extension experiment](https://github.com/kennysmithed/SemanticExtension). This is a more complex experiment looking at how participants extend the meaning of novel signals in a communication game. It is based on the dyadic interaction code from this course, but includes additional machinery to deal with a wider range of participant drop-outs, has on-screen trial counters, a warm-up with catch trials.
@@ -139,14 +139,14 @@ We will provide some extra drop-in labs after the conclusion of the regular lect
 some help with your final assignment code. Obviously we won't write your code for you, but if you are having trouble interpreting 
 an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. 
 Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of 
-questions, then go away. 
-- Wednesday 20th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.
+questions, then go away. The exact dates and times will be added here in due course
+<!-- - Wednesday 20th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.
 - Wednesday 20th November, 1.30pm-3.00pm, DSB 1.08, with Kenny.
 - Monday 25th November, 11am-12, DSB 1.08, with Kenny.
 - Monday 25th November, 2pm-3pm, DSB 1.08, with Kenny.
 - Wednesday 27th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.
 - Tuesday 3rd December, 1.30pm-3pm, DSB 1.08, with Kenny.
-- Wednesday 4th December, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Maisy.
+- Wednesday 4th December, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Maisy. -->
 
 ## Re-use
 
