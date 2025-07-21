@@ -1,4 +1,4 @@
-This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2025/2026. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
+This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2025/2024. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
 
 **For non-Edinburgh people**: all the course materials are here and you are welcome to use them with attribution. If you would like us to run something like this for your students or research group, [contact Jenny](mailto:jennifer.culbertson@ed.ac.uk). Please note that this course was designed and created by [Kenny Smith](http://www.lel.ed.ac.uk/~kenny/), but he is on sabbatical this year.
 
