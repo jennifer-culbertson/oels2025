@@ -1,6 +1,6 @@
 theme: jekyll-theme-midnight
 title: Online Experiments for Language Scientists
-description: Academic year 2025-2026
+description: Academic year 2024-2025
 plugins:
   - jekyll-relative-links
 relative_links:
