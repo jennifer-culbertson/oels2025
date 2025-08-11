@@ -75,7 +75,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk4.md)
 - [Lecture slides](slides/oels_lecture_wk4.pdf) -->
 
-### Week 5 (13th October): Word learning / frequency learning
+### Week 5 (13th October): BREAK
  - *Catch up:* work through any reading or programming content you haven't finished, or get a head start on next week!
 
 ### Week 6 (20th October): Word learning / frequency learning
