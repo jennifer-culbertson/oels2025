@@ -12,13 +12,13 @@ No prior experience in coding is assumed, but you have to be prepared to dive in
 
 ## The teaching team
 
-The course is co-taught by [Jenny Culbertson](https://jennifer-culbertson.github.io/), [Shira Tal](https://sites.google.com/view/shiratal/) and [Alisdair Tullo](https://www.ed.ac.uk/profile/alisdair-tullo/). Jenny (that's me) is the main lecturer and the course organiser; Alisdair is the PPLS javascript/jsPsych guru and delivers the lab sessions with Jenny and/or the course tutors. Best way to get in touch with us is in one of the live sessions, see below, or by email to [jennifer.culbertson@ed.ac.uk](mailto:jennifer.culbertson@ed.ac.uk) or [alisdair.tullo@ed.ac.uk](mailto:alisdair.tullo@ed.ac.uk).
+The course is co-taught by [Jenny Culbertson](https://jennifer-culbertson.github.io/), [Shira Tal](https://sites.google.com/view/shiratal/) and [Alisdair Tullo](https://www.ed.ac.uk/profile/alisdair-tullo/). Jenny (that's me) is the main lecturer and the course organiser; Alisdair is the PPLS javascript/jsPsych guru and delivers the lab sessions with Jenny, Shira and the course tutors. Best way to get in touch with us is in one of the live sessions, see below, or by email to [jennifer.culbertson@ed.ac.uk](mailto:jennifer.culbertson@ed.ac.uk), [shira.tal@ed.ac.uk](mailto:shira.tal@ed.ac.uk) or [alisdair.tullo@ed.ac.uk](mailto:alisdair.tullo@ed.ac.uk).
 
 We'll also be supported in lab classes by [Maisy Hallam](https://maisyhallam.github.io) and Shuya Chen, who are doing their PhDs at Edinburgh and use jsPsych to build online experiments for their own research.  
 
 ## Class times
 
-Lectures take place on Mondays, 11.10-12.00, in room XX, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesdays, 12.10-14.00, in room XX [Appleton Tower](https://www.ed.ac.uk/maps/maps?building=0201); this is an open-plan Teaching Studio on the mezzanine level. 
+Lectures take place on Mondays, 11.10-12.00, in room LG.09, [40 George Square Lower Teaching Hub](https://www.accessable.co.uk/the-university-of-edinburgh/central-area/access-guides/george-square-40-lecture-theatres). Labs are on Wednesdays, 12.10-14.00, in room M2 [Appleton Tower](https://www.accessable.co.uk/the-university-of-edinburgh/central-area/access-guides/appleton-tower); this is an open-plan Teaching Studio on the mezzanine level. 
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
@@ -75,8 +75,10 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk4.md)
 - [Lecture slides](slides/oels_lecture_wk4.pdf) -->
 
-
 ### Week 5 (13th October): Word learning / frequency learning
+ - *Catch up:* work through any reading or programming content you haven't finished, or get a head start on next week!
+
+### Week 6 (20th October): Word learning / frequency learning
 
 - *Scientific content:* probability matching and regularisation
 - *Technical content:* using trial data for contingent trials, saving data
@@ -84,7 +86,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk5.md)
 - [Lecture slides](slides/oels_lecture_wk5.pdf) -->
 
-### Week 6 (20th October): Audio stimuli
+### Week 7 (27th October): Audio stimuli
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Audio, trial data again, preloading stimuli, saving data trial by trial
@@ -92,7 +94,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk6.md)
 - [Lecture slides](slides/oels_lecture_wk6.pdf) -->
 
-### Week 7 (27th October): Priming and overspecification
+### Week 8 (3rd November): Priming and overspecification
 
 - *Scientific content:* Priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, conditional timelines, reading trial lists from CSV
@@ -100,7 +102,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk7.md)
 - [Lecture slides](slides/oels_lecture_wk7.pdf) -->
 
-### Week 8 (3rd November): Iterated Learning
+### Week 9 (10th November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
@@ -108,7 +110,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk8.md)
 - [Lecture slides](slides/oels_lecture_wk8.pdf) -->
 
-### Week 9 (10th November): Participant-to-participant interaction
+### Week 10 (17th November): Participant-to-participant interaction
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
@@ -116,16 +118,16 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk9.md)
 - [Lecture slides](slides/oels_lecture_wk9.pdf) -->
 
-### Week 10 (17th November): Interacting with servers and crowdsourcing sites
+### Extra material: Interacting with servers and crowdsourcing sites
 
-No lecture or lab in week 10, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
+No lecture or lab this week, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
 - *Scientific content:* None!
 - *Technical content:* How to set up a server, launch and pay participants on Prolific and MTurk, etc.
 <!-- - [How to get your experiment online](oels_wk10.md) -->
 
 
-### Bonus content
+### More bonus content
 
 I am sticking some extra documented experiments, in case they are useful for someone or provide inspiration.
 
@@ -139,7 +141,7 @@ We will provide some extra drop-in labs after the conclusion of the regular lect
 some help with your final assignment code. Obviously we won't write your code for you, but if you are having trouble interpreting 
 an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. 
 Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of 
-questions, then go away. The exact dates and times will be added here in due course
+questions, then go away. The exact dates and times will be added here in due course...
 <!-- - Wednesday 20th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.
 - Wednesday 20th November, 1.30pm-3.00pm, DSB 1.08, with Kenny.
 - Monday 25th November, 11am-12, DSB 1.08, with Kenny.
