@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My experiment</title>
+    <script src="https://unpkg.com/jspsych@8.0.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
+    <link href="https://unpkg.com/jspsych@8.0.2/css/jspsych.css" rel="stylesheet" type="text/css" />
+</head>
+<body></body>
+<script>
+    // initialise jspysch
+    var jsPsych = initJsPsych();
+
+    // create a trial, using a plugin, this one presents text stimuli
+    var hello_trial = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: 'Hello world!'
+    }
+
+    // create a trial, using a plugin, this one creates image stimuli
+    var star_trial = {
+        type: jsPsychImageKeyboardResponse,
+        stimulus: 'nasa_proxima.png'
+    }
+
+    // run the trial
+    //jsPsych.run([hello_trial]);
+    jsPsych.run([star_trial]);
+</script>
+</html>
