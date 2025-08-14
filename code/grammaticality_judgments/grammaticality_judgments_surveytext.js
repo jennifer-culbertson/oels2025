@@ -25,10 +25,10 @@ in each is the sentence to be rated.
 var survey_text_judgment_trial = {
   type: jsPsychSurveyText,
   preamble:
-    "<p style='text-align:left'>Give each sentence a numerical value.\
+    "<p style='width: 800px'>Give each sentence a numerical value.\
     This example sentence would receive a score of 100:</p>\
   <p><em>Who said my brother was kept tabs on by the FBI?</em></p>\
-  <p style='text-align:left'>Now provide ratings for the sentences below.</p>",
+  <p style='width: 800px'>Now provide ratings for the sentences below.</p>",
   questions: [
     { prompt: "Where did Blake buy the hat?" },
     { prompt: "What did you claim that Blake bought?" },
@@ -49,9 +49,9 @@ var consent_screen = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
     "<h3>Welcome to the experiment</h3>\
-  <p style='text-align:left'>Experiments begin with an information sheet that explains to the participant\
+  <p style='width: 800px'>Experiments begin with an information sheet that explains to the participant\
   what they will be doing, how their data will be used, and how they will be remunerated.</p>\
-  <p style='text-align:left'>This is a placeholder for that information, which is normally reviewed\
+  <p style='width: 800px'>This is a placeholder for that information, which is normally reviewed\
   as part of the ethical review process.</p>",
   choices: ["Yes, I consent to participate"],
 };

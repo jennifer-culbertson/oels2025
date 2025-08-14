@@ -18,7 +18,7 @@ You need two files for this experiment, which you can download through the follo
 - <a href="code/grammaticality_judgments/grammaticality_judgments.html" download> Download grammaticality_judgments.html</a>
 - <a href="code/grammaticality_judgments/grammaticality_judgments.js" download> Download grammaticality_judgments.js</a>
 
-The code makes some assumptions about where you will save it - you can change that if you want but then you'd have to edit the code so it is looking in the right place, so it might be simpler to copy my directory structure. If you haven't already, create a folder (also known as a directory) called e.g. `online_experiments_practicals`. Then create a new folder inside the `online_experiments_practicals` folder called `grammaticality_judgments`, and move the two files you just downloaded in there. So if you do that all correctly you will have a folder called `online_experiments_practicals` that has a single sub-folder called `grammaticality_judgments`, containing the grammaticality judgments code. On my mac it looks like this.
+The code makes some assumptions about where you will save it - you can change that if you want but then you'd have to edit the code so it is looking in the right place, so it might be simpler to copy my directory structure. If you haven't already, create a folder (also known as a directory) called e.g. `online_experiments_practicals`. Then create a new folder inside the `online_experiments_practicals` folder called `grammaticality_judgments`, and move the two files you just downloaded in there. So if you do that all correctly you will have a folder called `online_experiments_practicals` that has a single sub-folder called `grammaticality_judgments`, containing the grammaticality judgments code. It might looks something like this.
 
 ![suggested directory structure](images/grammaticality_judgments_directory_structure.png)
 
@@ -85,15 +85,15 @@ var consent_screen = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
     "<h3>Welcome to the experiment</h3>\
-  <p style='text-align:left'>Experiments begin with an information sheet that explains to the participant\
+  <p style='width: 800px'>Experiments begin with an information sheet that explains to the participant\
   what they will be doing, how their data will be used, and how they will be remunerated.</p>\
-  <p style='text-align:left'>This is a placeholder for that information, which is normally reviewed\
+  <p style='width: 800px'>This is a placeholder for that information, which is normally reviewed\
   as part of the ethical review process.</p>",
   choices: ["Yes, I consent to participate"],
 };
 ```
 
-You will notice that the `stimulus` parameter here is quite complicated - it includes some HTML markup, including tags for headers (`<h3>` and `</h3>` to start and end a header), and paragraphs (`<p>` ... `</p>`). By default, jsPsych centers all text, which sometimes looks fine (e.g. for the judgment trials, where we *want* the stimulus to be centered) but it looks terrible for instruction text, so I also tell it to left-align that text, by adding some stuff inside the paragraph tags - I start a left-aligned paragraph with `<p style='text-align:left'>`, then end it with `</p>` as usual. Finally, the `choices` parameter for this trial type is a list of button labels - lists are enclosed in square brackets, here the list contains exactly one option with the "yes I consent" text, which produces a screen with exactly one button to be clicked. Finally, I have to use a backslash (`\`) character whenever I want to include a line break in the stimulus string, otherwise javascript thinks there is a syntax error.
+You will notice that the `stimulus` parameter here is quite complicated - it includes some HTML markup, including tags for headers (`<h3>` and `</h3>` to start and end a header), and paragraphs (`<p>` ... `</p>`). By default, jsPsych centers all text, which often works well (e.g. for the judgment trials, where we *want* the stimulus to be centered). It doesn't always work for instructions, so I usually fix it up a bit. For example, here I specific the width of the text paragraph using `<p style='width: 800px'>`, then end the paragraph with `</p>` as usual. This prevents the text from going right up to the edge of the browser page. Finally, the `choices` parameter for this trial type is a list of button labels - lists are enclosed in square brackets, here the list contains exactly one option with the "yes I consent" text, which produces a screen with exactly one button to be clicked. Finally, I have to use a backslash (`\`) character whenever I want to include a line break in the stimulus string, otherwise javascript thinks there is a syntax error.
 
 I also define some information screens - these are also `html-button-response` trials, just like the consent screen. So for example the first instruction screen looks like this:
 
@@ -102,11 +102,11 @@ var instruction_screen_1 = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
     "<h3>Instructions</h3> \
-  <p style='text-align:left'>In this experiment you will read English sentences, and determine if they sound\
+  <p style='width: 800px'>In this experiment you will read English sentences, and determine if they sound\
   grammatical to you. By grammatical, we mean whether you think a native speaker of\
   English could say this sentence in a conversation. In other words, do you think it\
   would sound odd for your friends to say this to you, as if they don't speak English natively?</p>\
-  <p style='text-align:left'>We are <b>not</b> concerned with whether the sentence would be graded highly\
+  <p style='width: 800px'>We are <b>not</b> concerned with whether the sentence would be graded highly\
   by a writing teacher: we do not care about points of style or clarity, and we do\
   not care about the grammar rules that you learned in school (who versus whom,\
   ending a sentence with a preposition, etc). Instead, we are interested in whether\
@@ -115,7 +115,7 @@ var instruction_screen_1 = {
 };
 ```
 
-That's quite a lot of text, but it's just a very simple button response trial with a long bit of HTML-formatted bit of text to display. There are several other options for instruction screens - `html-keyboard-response` would be OK (although I find it's a bit too easy to advance through lots of those by mashing the keyboard), or jsPsych provides [an instructions plugin](https://www.jspsych.org/v8/plugins/instructions/) which allows you to specify multiple pages in a single trial and gives participants the ability to scroll forwards and backwards through those pages. 
+That's quite a lot of text, but it's just a very simple button response trial with a long HTML-formatted piece of text to display. There are several other options for instruction screens - `html-keyboard-response` would be OK (although I find it's a bit too easy to advance through lots of those by mashing the keyboard), or jsPsych provides [an instructions plugin](https://www.jspsych.org/v8/plugins/instructions/) which allows you to specify multiple pages in a single trial and gives participants the ability to scroll forwards and backwards through those pages. 
 
 Once all the various trials are defined, we can stick them together in a timeline for the experiment. The timeline is very simple and is just a list of all the trials we have created up to this point, in the order we want them to appear:
 ```js
@@ -155,6 +155,9 @@ You might have noticed that in `grammaticality_judgments.js` we quite laboriousl
 
 You might be wondering what the advantage is of using this slightly fancier code, and/or thinking "I could just copy and paste the judgment trials and edit them directly, isn't that simpler?". It maybe is conceptually simpler to copy and paste simple code, but it's also more error prone, since it relies on you not making any mistakes in copying, pasting and editing the same little block of code over and over again. In general, if you find yourself doing a lot of copying, pasting and editing when writing code it's a sign that you are doing something manually that the computer could do for you automatically, more quickly and with less chance of errors. We'll come back to that in the next practical when we look at self-paced reading, where the "simple" manual approach would produce some really unwieldy code.
 
+## Optional: a version of the code using the slider plugin
+
+In addition to button click and text responses, jsPsych also has a slider response type, for example the [html-slider-response plugin](https://www.jspsych.org/v8/plugins/html-slider-response/). If you have a look at the documentation, you will see that there are quite a few parameters that allow you to modify various aspects of the slider: the start and end point labels, the starting value on the slider when the trial begins, the slider width etc. Modify the experiment one last time to use this kind of response.
 
 ## Re-use
 

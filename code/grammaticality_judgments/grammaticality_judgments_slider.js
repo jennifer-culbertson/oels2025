@@ -44,38 +44,38 @@ We just have 4 judgment trials here, obviously a real experiment would typically
 
 //Filler sentence, grammatical
 var judgment_trial_1 = {
-  type: jsPsychHtmlKeyboardResponse,
+  type: jsPsychHtmlSliderResponse,
   stimulus: "Where did Blake buy the hat?",
   prompt:
-    "<p><em>Could this sentence be spoken by a native speaker of English? Press y or n</em></p>",
-  choices: ["y", "n"],
+    "<p><em>How natural would it be to hear a native English speaker say this sentence? Please use the slider to provide a rating.</em></p>",
+  labels: ['unnatural','natural']  
 };
 
 //Complex NP Island Effect, control
 var judgment_trial_2 = {
-  type: jsPsychHtmlKeyboardResponse,
+  type: jsPsychHtmlSliderResponse,
   stimulus: "What did you claim that Blake bought?",
   prompt:
-    "<p><em>Could this sentence be spoken by a native speaker of English? Press y or n</em></p>",
-  choices: ["y", "n"],
+    "<p><em>How natural would it be to hear a native English speaker say this sentence? Please use the slider to provide a rating.</em></p>",
+  labels: ['unnatural','natural']  
 };
 
 //Complex NP Island Effect, violation
 var judgment_trial_3 = {
-  type: jsPsychHtmlKeyboardResponse,
+  type: jsPsychHtmlSliderResponse,
   stimulus: "What did you make the claim that Blake bought?",
   prompt:
-    "<p><em>Could this sentence be spoken by a native speaker of English? Press y or n</em></p>",
-  choices: ["y", "n"],
+    "<p><em>How natural would it be to hear a native English speaker say this sentence? Please use the slider to provide a rating.</em></p>",
+  labels: ['unnatural','natural']  
 };
 
 //Filler sentence, ungrammatical
 var judgment_trial_4 = {
-  type: jsPsychHtmlKeyboardResponse,
+  type: jsPsychHtmlSliderResponse,
   stimulus: "Did where Blake buy the hat?",
   prompt:
-    "<p><em>Could this sentence be spoken by a native speaker of English? Press y or n</em></p>",
-  choices: ["y", "n"],
+    "<p><em>How natural would it be to hear a native English speaker say this sentence? Please use the slider to provide a rating.</em></p>",
+  labels: ['unnatural','natural']  
 };
 
 /******************************************************************************/
@@ -110,11 +110,11 @@ var instruction_screen_1 = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
     "<h3>Instructions</h3> \
-  p style='width: 800px'In this experiment you will read English sentences, and determine if they sound\
+  <p style='width: 800px'>In this experiment you will read English sentences, and determine if they sound\
   grammatical to you. By grammatical, we mean whether you think a native speaker of\
   English could say this sentence in a conversation. In other words, do you think it\
   would sound odd for your friends to say this to you, as if they don't speak English natively?</p>\
-  p style='width: 800px'We are <b>not</b> concerned with whether the sentence would be graded highly\
+  <p style='width: 800px'>We are <b>not</b> concerned with whether the sentence would be graded highly\
   by a writing teacher: we do not care about points of style or clarity, and we do\
   not care about the grammar rules that you learned in school (who versus whom,\
   ending a sentence with a preposition, etc). Instead, we are interested in whether\
@@ -126,11 +126,10 @@ var instruction_screen_2 = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
     "<h3>Instructions, continued</h3>\
-  <p style='width: 800px'>For each sentence, simply press the <b>y</b> key (for yes) if you think the sentence\
-  could be spoken by a native speaker, or the <b>n</b> key (for no) if you think that\
-  the sentence could not be spoken by a native speaker.</p>\
-  <p style='width: 800px'>Here are two examples: the first is a <b>no</b> for most speakers, and the\
-  second is a <b>yes</b> for most speakers.</p>\
+  <p style='width: 800px'>For each sentence, using the slider provided, please rate how natural you think the sentence\
+  would sound if spoken by a native speaker</p>\
+  <p style='width: 800px'>Here are two examples: the first would be rated as <b>unnatural</b> for most speakers, and the\
+  second would be rated as <b>natural</b> for most speakers.</p>\
   <p> <span style='color:red'>The was insulted waitress frequently</span> <b>(no)</b></p>\
   <p> <span style='color:green'>This is a pen</span> <b>(yes)</b></p>",
   choices: ["Click when you are ready to begin"],
