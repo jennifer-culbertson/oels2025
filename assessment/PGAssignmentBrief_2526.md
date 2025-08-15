@@ -1,4 +1,4 @@
-**Online Experiments for Language Scientists, 2025-2026, Postgraduate (LASC11167) Assignment brief**					
+**Postgraduate (LASC11167) Assignment brief, 2025/2026**					
 
 **Sole assessment: coding project plus report, due 4th December, worth 100% of course mark**
 
