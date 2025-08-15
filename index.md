@@ -18,7 +18,7 @@ We'll also be supported in lab classes by [Maisy Hallam](https://maisyhallam.git
 
 ## Class times
 
-Lectures take place on Mondays, 11.10-12.00, in room LG.09, [40 George Square Lower Teaching Hub](https://www.accessable.co.uk/the-university-of-edinburgh/central-area/access-guides/george-square-40-lecture-theatres). Labs are on Wednesdays, 12.10-14.00, in room M2 [Appleton Tower](https://www.accessable.co.uk/the-university-of-edinburgh/central-area/access-guides/appleton-tower); this is an open-plan Teaching Studio on the mezzanine level. 
+Lectures take place on Mondays, 11.10-12.00, in room LG.09, [40 George Square Lower Teaching Hub](https://www.accessable.co.uk/the-university-of-edinburgh/central-area/access-guides/george-square-40-lecture-theatres). Labs are on Thursdays, 12.10-14.00, in room M2 [Appleton Tower](https://www.accessable.co.uk/the-university-of-edinburgh/central-area/access-guides/appleton-tower); this is an open-plan Teaching Studio on the mezzanine level. 
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
