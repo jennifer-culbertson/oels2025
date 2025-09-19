@@ -62,10 +62,10 @@ Each week there will be a set reading and a programming assignment. The reading 
 ### Week 3 (29th September): Grammaticality judgements
 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
-- *Technical content:* simple key- and button-press responses
-<!-- - [Reading](oels_reading_wk3.md) -->
-<!-- - [Programming task](oels_practical_wk3.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk3.pdf) -->
+- *Technical content:* simple key- and button-press responses (extra: slider responses)
+- [Reading](oels_reading_wk3.md)
+- [Programming task](oels_practical_wk3.md)
+- [Lecture slides](slides/oels_lecture_wk3.pdf)
 
 ### Week 4 (6th October): Self-paced reading
 
