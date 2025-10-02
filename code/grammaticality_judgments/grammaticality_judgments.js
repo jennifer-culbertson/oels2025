@@ -110,11 +110,11 @@ var instruction_screen_1 = {
   type: jsPsychHtmlButtonResponse,
   stimulus:
     "<h3>Instructions</h3> \
-  p style='width: 800px'In this experiment you will read English sentences, and determine if they sound\
+  <p style='width: 800px'>In this experiment you will read English sentences, and determine if they sound\
   grammatical to you. By grammatical, we mean whether you think a native speaker of\
   English could say this sentence in a conversation. In other words, do you think it\
   would sound odd for your friends to say this to you, as if they don't speak English natively?</p>\
-  p style='width: 800px'We are <b>not</b> concerned with whether the sentence would be graded highly\
+  <p style='width: 800px'>We are <b>not</b> concerned with whether the sentence would be graded highly\
   by a writing teacher: we do not care about points of style or clarity, and we do\
   not care about the grammar rules that you learned in school (who versus whom,\
   ending a sentence with a preposition, etc). Instead, we are interested in whether\
