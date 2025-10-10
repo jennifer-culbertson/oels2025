@@ -1,5 +1,5 @@
 ---
-title: Week 6 reading
+title: Week 7 reading
 description: Speech perception, social influences on phonetic adaptation
 ---
 
@@ -12,7 +12,7 @@ This week we are looking at Lev-Ari (2017). This paper reports an online percept
 Read:
 - [Lev-Ari, S. (2017). Talking to fewer people leads to having more malleable linguistic representations. *PLoS ONE, 12,* e0183593.](https://doi.org/10.1371/journal.pone.0183593)
 
-Just as a footnote: I actually edited this paper for PLoS ONE, which means it was assigned to me by the journal and I solicited reviews from other researchers, requested revisions to the paper, and made a final decision on the paper based on another round of revision.
+<!-- Just as a footnote: I actually edited this paper for PLoS ONE, which means it was assigned to me by the journal and I solicited reviews from other researchers, requested revisions to the paper, and made a final decision on the paper based on another round of revision. -->
 
 As you read this paper make notes of any questions, criticisms or ideas it gives you, and I'll leave time in the Monday lecture slot so we can discuss these in class.
 
