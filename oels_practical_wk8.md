@@ -1,11 +1,11 @@
 ---
-title: Week 7 practical
+title: Week 8 practical
 description: Audio recording, more randomisation stuff, custom preload lists, conditional timelines, reading trial lists from CSV
 ---
 
-# The plan for week 7 practical
+# The plan for week 8 practical
 
-This week we are going to look at code for a confederate priming experiment based on the experiment described in Loy & Smith (2021) (and in fact using our stimuli). We are also going to add a few more bits and pieces involving randomisation (random participant IDs, random wait durations to simulate a human partner), we'll build a custom preload list to make sure our button images are preloaded before the experiment starts (using an alternative technique to the one used in the answer to one of the harder questions from last week), we'll show you how to include a conditional timeline (trials that only run if the participant gave a certain response on a previous trial), and finally I'll show how to load a trial list from a CSV file (handy if you want to use a pre-built trial list). So quite a lot to get through! 
+This week we are going to look at code for a confederate priming experiment based on the experiment described in Loy & Smith (2021) (and in fact using their stimuli). We are also going to add a few more bits and pieces involving randomisation (random participant IDs, random wait durations to simulate a human partner), we'll build a custom preload list to make sure our button images are preloaded before the experiment starts (using an alternative technique to the one used in the answer to one of the harder questions from last week), we'll show you how to include a conditional timeline (trials that only run if the participant gave a certain response on a previous trial), and finally I'll show how to load a trial list from a CSV file (handy if you want to use a pre-built trial list). So quite a lot to get through! 
 
 
 # Acknowledgments

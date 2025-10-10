@@ -1,9 +1,9 @@
 ---
-title: Week 9 practical
+title: Week 10 practical
 description: web sockets, python servers, incrementally building a timeline
 ---
 
-# The plan for week 9 practical
+# The plan for week 10 practical
 
 This week we are going to look at code for a dyadic interaction task based on the Combined condition of the experiment described in Kanwal et al. (2017). 
 

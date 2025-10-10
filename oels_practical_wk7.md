@@ -1,9 +1,9 @@
 ---
-title: Week 6 practical
+title: Week 7 practical
 description: Audio, trial data again, preloading stimuli, saving data to the server trial by trial
 ---
 
-# The plan for week 6 practical
+# The plan for week 7 practical
 
 This week we are going to look at code for a perceptual learning experiment based on the experiment described in Levi-Ari (2017) (and in fact using her stims, see below). There's no new material to look at in the Online Experiments with jsPsych tutorial. 
 

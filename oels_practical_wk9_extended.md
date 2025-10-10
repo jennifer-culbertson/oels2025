@@ -1,5 +1,5 @@
 ---
-title: Week 8 practical, adding test trials, maximum generation, deduplication
+title: Week 9 practical, adding test trials, maximum generation, deduplication
 description: An example of how to code this up
 ---
 
