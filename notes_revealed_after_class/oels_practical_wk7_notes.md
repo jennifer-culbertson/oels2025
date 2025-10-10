@@ -1,87 +1,209 @@
 ---
-title: Week 7 practical, notes
+title: Week 6 practical, notes
 description: Some notes on answers to the practical questions
 ---
 
-### Run the basic `conferedate_priming.html` experiment and look at the CSV and audio data files it creates. Check you can access the audio, and that you can see how the audio and the trial list link up.
+### Run the code once and look at the `perceptuallearning_data.csv` file to make sure it makes sense to you. You can also compare the data saved in the server with the data dumped in the browser. Run the code again and see what happens to that file, and think about how you might want to save your data for a real experiment.
 
-You should find a data file called something like cp_a3fjy6ahr3.csv (where a3fjy6ahr3 is the random ID - yours will be different!), plus a bunch of audio files in the `audio` folder called a3fjy6ahr3_10.wav, a3fjy6ahr3_15.wav etc, one per recording you made when running through the experiment. The numbers in the recording names (10, 15, etc) correspond to the information in the trial_index column in the CSV data file.
+Because we are saving the data trial-by-trial, and only saving the critical trials (and not e.g. the instruction screens), the data saved on the server is a bit more compact and neat than the data dumped in the browser window at the end. But even though we are saving the data trial-by-trial, we are still just appending new data to the end of the CSV file (including the header row). As I said last week, that's pretty messy, and not really what you want if you are collecting real data, so next week we'll show you how to create a separate CSV file for each participant (using a unique participant ID in the file name).
 
-### Run it again and see where the data from the second run is stored - you may need to refresh your cyberduck window with the refresh button.
+### Check you can add a few more picture selection trials with other images and sound files (you might need to consult the `perceptual_learning_stims.csv` file to see the full list of stimuli).
 
-Every time you run it you are assigned a different random ID, so you get a separate data file and a separate set of recordings.
-
-### The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
-
-You need to change the names of the sound files. In particular, our confederate in the base code produces a single overspecific description, which we create with the following command:
+This just involves adding some more lines using the `make_picture_selection_trial` and `make_categorization_trial` functions to make trials. So our current code for creating a list of picture selection trials is:
 
 ```js
-var interaction_trials = [
-  ...
-  //critical trial (confederate describes red sock using adjective)
-  make_picture_selection_trial("g4_c1_1", "g4_c1", "g2_c3"),
-  ...
+var selection_trials_unshuffled = [
+  make_picture_selection_trial("fresh_dill_man", "fresh_dill", "dry_dill"),
+  make_picture_selection_trial("orange_telephone","orange_telephone","black_telephone"),
+  make_picture_selection_trial("angel_wing", "angel_wing", "airplane_wing"),
+  make_picture_selection_trial("animal_ear", "animal_ear", "animal_nose"),
 ];
+
+var selection_trials = jsPsych.randomization.shuffle(
+  selection_trials_unshuffled
+);
+
 ```
+ (Then the list is shuffled and eventually added to the timeline). So we can just add more trials, like this:
 
-That's an overdescription because the two choices are a red sock ("g4_c1") and a green glove ("g2_c3"), so just saying "the sock" would be enough, and yet the confederate says "the red sock" (that's what the sound file "g4_c1_1" contains). So if we just change the sound file to one where she says "the sock", that will produce a minimally descriptive confederate. It turns out there are two suitable sound files, "g4_1" and "g4_2" (look in the `sounds` folder) so either of those will do. E.g. we can change that one line in constructing `interaction_trials` to
-
-```js
-var interaction_trials = [
-  ...
-  //critical trial (confederate describes red sock using adjective)
-  make_picture_selection_trial("g4_1", "g4_c1", "g2_c3"),
-  ...
+ ```js
+var selection_trials_unshuffled = [
+  //same 4 trials as before
+  var selection_trials_unshuffled = [
+  make_picture_selection_trial("fresh_dill_man", "fresh_dill", "dry_dill"),
+  make_picture_selection_trial("orange_telephone","orange_telephone","black_telephone"),
+  make_picture_selection_trial("angel_wing", "angel_wing", "airplane_wing"),
+  make_picture_selection_trial("animal_ear", "animal_ear", "animal_nose"),
+  //2 new trials
+  make_picture_selection_trial("falling_dominoes_man","falling_dominoes","standing_dominoes"),
+  make_picture_selection_trial("eiffel_tower","eiffel_tower","pisa_tower"),
 ];
-```
+ ```
 
-### Now try running the `conferedate_priming_readfromcsv.html` experiment - you don't have to work through the whole experiment, just a few trials! Again, check you can see your data on the server.
+ That's the first /d/ and /t/ trial from the `perceptual_learning_stims.csv`, and I set it so that the dominoes trial will get a manipulated /d/ (as indicated by `\_man` at the end of the sound file name) but the tower trial gets a normal /t/ (no `\_man` at the end).
 
-Nothing tricky here!
-
-### For this version of the experiment, how do you switch from an overspecific to minimally-specific confederate? (Hint: this involves changing the name of the file used by the `read_trials_and_prepare_timeline` function in the very last line of the code).
-
-Hopefully at this point in the practical you figured out that the `read_trials_and_prepare_timeline` function at the end of the code takes a filename, either `overspecific_confederate.csv` or `minimal_confederate.csv`, and if you use a different filename you get a different kind of confederate. So at the moment the code loads the file for the overspecific confederate:
+Similarly, here's our code for the categorization trials:
 
 ```js
-read_trials_and_prepare_timeline("overspecific_confederate.csv");
-```
+var categorization_trials_unshuffled = [
+  make_categorization_trial("samespeaker_VOT5"),
+  make_categorization_trial("samespeaker_VOT10"),
+  make_categorization_trial("samespeaker_VOT15"),
+  make_categorization_trial("samespeaker_VOT20"),
+  make_categorization_trial("samespeaker_VOT25"),
+  make_categorization_trial("samespeaker_VOT30"),
+  make_categorization_trial("samespeaker_VOT50"),
+  make_categorization_trial("samespeaker_VOT80"),
+];
 
-And if we just change the file name it loads, we'll get the minimally specific confederate:
 
-```js
-read_trials_and_prepare_timeline("minimal_confederate.csv");
-```
-
-Note that this confederate *still uses colour adjectives when they are required*, which in this randomisation of the trial list happens in the first couple of trials - but they don't use them when they are not required, hence they are minimally specific and not underspecific.
-
-
-### Building on the previous question: how would you randomly allocate a participant to one of these two conditions, overspecific or minimally specific? 
-
-[We already provided thoughts on how this could be done](oels_practical_wk7_extended.md) (which also covers the harder question later on). 
-
-### For either of these experiments, figure out how to disable image preloading for the button images and re-run the experiment. Can you see the difference? If it works smoothly, try running the experiment in Chrome in Incognito mode, which prevents your browser saving images etc for you. Can you see the difference now?
-
-Our preloading is done by creating a preload trial and adding it to the timeline, so if you just delete the `preload` trial from the timeline that will disable preloading. E.g. in the basic `confederate_priming.js` code:
-
-```js
-var full_timeline = [].concat(
-  consent_screen,
-  audio_permission_instructions1,
-  audio_permission_instructions2,
-  preload, //delete or comment out this line to disable preloading!
-  write_headers,
-  pre_interaction_instructions,
-  interaction_trials,
-  final_screen
+var categorization_trials = jsPsych.randomization.shuffle(
+  categorization_trials_unshuffled
 );
 ```
 
-If you delete the preloading you should see that you get a slight delay before the images appear, particularly if you are on a slow internet connection (e.g. tethering via your phone).
+I could just copy and paste some extra lines featuring `make_categorization_trial` in there (yawn), or I could use `jsPsych.randomization.repeat` to repeat that list a few times, to test people on each dean/teen decision a few times, e.g. 
 
-### [Harder, optional] Can you change the `random_wait` function so it generates longer waits early in the experiment and shorter waits later on? 
+```js
+var categorization_trials = jsPsych.randomization.repeat(
+  categorization_trials_unshuffled,
+  2
+);
+```
 
-[We already provided thoughts on how this could be done](oels_practical_wk7_extended.md) 
+Note that `jsPsych.randomization.repeat` repeats *and* shuffles, so that will give me 2 copies of all the categorization trials.
+
+### There are 4 conditions in the experiment - all combinations of manipulated /d/ or manipulated /t/, same speaker or new speaker in the categorisation test. How would you build stimulus lists for these different conditions, i.e. what would you need to change in the code to change the condition a participant experiences? You don't have to do anything fancy here - ideally we'd like to have the code assign participants to a random condition every time the experiment starts, and we'll cover that soon, but at this point just figure out what bits of the stimulus list you need to manually edit to run these different conditions.
+
+To do this manually is pretty simple. Remember that in the manipulated /d/ condition, all instances of /d/ in the picture selection trials are manipulated - that's actually what I have in the trial list above, you'll notice that whenever the trial involves a /d/ (dill, dominoes) the file name ends in "_man", so they hear the manipulated audio.
+
+To flip this to manipulated /t/ I just need to remove the "_man" for the /d/ trials and add it for the /t/ trials so that they hear normal /d/ and manipulated /t/: 
+```js
+var selection_trials_unshuffled = [
+  //same 4 trials as before
+  var selection_trials_unshuffled = [
+  make_picture_selection_trial("fresh_dill", "fresh_dill", "dry_dill"),
+  make_picture_selection_trial("orange_telephone_man","orange_telephone","black_telephone"),
+  make_picture_selection_trial("angel_wing", "angel_wing", "airplane_wing"),
+  make_picture_selection_trial("animal_ear", "animal_ear", "animal_nose"),
+  //2 new trials
+  make_picture_selection_trial("falling_dominoes","falling_dominoes","standing_dominoes"),
+  make_picture_selection_trial("eiffel_tower_man","eiffel_tower","pisa_tower"),
+];
+```
+
+How about switching from the same-speaker condition to the new speaker condition? Remember, the same- vs new-speaker manipulation affects the sound files you hear in the categorization test - thanks to the sensible and clear names of the sound files, I can just change the names of the sound files there to play the new (male) voice:
+
+```js
+var categorization_trials_unshuffled = [
+  make_categorization_trial("newspeaker_VOT5"),
+  make_categorization_trial("newspeaker_VOT10"),
+  make_categorization_trial("newspeaker_VOT15"),
+  make_categorization_trial("newspeaker_VOT20"),
+  make_categorization_trial("newspeaker_VOT25"),
+  make_categorization_trial("newspeaker_VOT30"),
+  make_categorization_trial("newspeaker_VOT50"),
+  make_categorization_trial("newspeaker_VOT80"),
+];
+```
+
+### How would you modify this code so that the phoneme categorisation trials are all repeated several times? Note that there is a manual way to do this and a fast way, using some built-in jsPsych functions for repeating things that we have seen before!
+
+I actually did this above, using `jsPsych.randomization.repeat`.
+
+### At the moment the dean-teen buttons always appear in the same order. Can you randomise their left-right position and still keep track of which option the participant clicked?
+
+This should be pretty easy, since we are doing this for the picture selection trials - so we can just use the same trick, randomising the trial choices in `on_start`:
+
+```js
+function make_categorization_trial(sound) {
+  //add the path and file extension
+  var sound_file = "phoneme_categorization_sounds/" + sound + ".mp3";
+  var trial = {
+    type: jsPsychAudioButtonResponse,
+    stimulus: sound_file,
+    choices: ["dean", "teen"], //placeholder choices
+    data: {block: "phoneme_categorization"},
+    save_trial_parameters: {choices: true},
+    post_trial_gap: 500,
+    on_start: function (trial) {
+      var shuffled_choices = jsPsych.randomization.shuffle(trial.choices); //shuffle
+      trial.choices = shuffled_choices; //set trial.choices to shuffled choices
+    },
+    on_finish: function (data) {
+      var button_number = data.response;
+      data.button_selected = data.choices[button_number];
+      save_perceptual_learning_data_line(data);
+    },
+  };
+  return trial;
+}
+```
+
+### At the moment the audio we present using the `audio-button-response` plugin is interruptible - if you click part-way through the audio it will register your response and move to the next trial. Can you fix it to produce a non-interruptible audio, i.e. you can't click until the audio is done? Hint: the trick here is going to look at [the documentation](https://www.jspsych.org/v8/plugins/audio-button-response/)) for the `audio-button-response` plugin.
+
+jsPsych makes it pretty easy - we can just set the `response_allowed_while_playing` parameter for `audio-button-response` trials to false. E.g. adding that to my `make_categorization_trial` function:
+
+```js
+function make_categorization_trial(sound) {
+  //add the path and file extension
+  var sound_file = "phoneme_categorization_sounds/" + sound + ".mp3";
+  var trial = {
+    type: jsPsychAudioButtonResponse,
+    stimulus: sound_file,
+    choices: ["dean", "teen"], //placeholder choices
+    data: {block: "phoneme_categorization"},
+    save_trial_parameters: {choices: true},
+    post_trial_gap: 500,
+    response_allowed_while_playing: false,
+    on_start: function (trial) {
+      var shuffled_choices = jsPsych.randomization.shuffle(trial.choices); //shuffle
+      trial.choices = shuffled_choices; //set trial.choices to shuffled choices
+    },
+    on_finish: function (data) {
+      var button_number = data.response;
+      data.button_selected = data.choices[button_number];
+      save_perceptual_learning_data_line(data);
+    },
+  };
+  return trial;
+}
+```
+
+### Following the guidance in the notes above on preloading, add code to automatically preload the images used as buttons in the picture selection phase. The easy way to do this is to manually specify a list of images (including their path names!) to preload - generating this list automatically is a harder question below!
+
+All we are looking for at this point is a manual preload list - I can look through my trials (e.g. using the expanded list above), and note that I am using the following images: "fresh_dill", "dry_dill", "orange_telephone", "black_telephone", "angel_wing", "airplane_wing", "animal_ear", "animal_nose", "falling_dominoes", "standing_dominoes", "eiffel_tower", "pisa_tower". I need to put those in a list, but I also need to add the information on the path (they are all in `picture_selection_images/`) and the extension (they are all `.jpg`). So my preload image will look like this:
+
+```js
+var preload_image_list = 
+[ 
+  "picture_selection_images/fresh_dill.jpg", 
+  "picture_selection_images/dry_dill.jpg", 
+  "picture_selection_images/orange_telephone.jpg", 
+  "picture_selection_images/black_telephone.jpg", 
+  //etc
+];
+```
+
+Then I can just use this in the preloading trial:
+
+```js
+var preload = {
+  type: jsPsychPreload,
+  auto_preload: true,
+  images: preload_image_list
+};
+```
+
+### [Harder, optional] The code doesn't currently save the social network questionnaire data. Can you add a new function, `save_questionnaire_data`, which runs at the end of the questionnaire trial and saves that data to a file on the server? You can just dump it into a file as an undigested string (i.e. with various curly brackets etc in there), or if you are feeling ambitious you can try to save some more nicely formatted data using the same tricks we use in `save_perceptual_learning_data`, in which case the first thing you are probably going to want to do is use `console.log` to get a look at the data generated by the questionnaire trial and take it from there. 
+
+[You can already access our answers for the harder questions here](oels_practical_wk6_extended.md) - this covers this question and the next.
+
+### [Harder, optional] Add code to automatically preload all the images used as buttons in the picture selection phase, without having to manually specify the image list. You could extract this automatically from `selection_trials`, e.g. using a for-loop to work through the trials in `selection_trials`, extract the image names from the `choices` of each trial, and add them to a preload list. 
+
+[You can already access our answers for the harder questions here](oels_practical_wk6_extended.md).
+
+
 
 ## Re-use
 

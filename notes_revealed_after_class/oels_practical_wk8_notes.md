@@ -1,88 +1,87 @@
 ---
-title: Week 10 practical, notes
+title: Week 7 practical, notes
 description: Some notes on answers to the practical questions
 ---
 
-### **After setting up the various folders in `server_data`**, run the experiment and use cyberduck to watch the CSV files appearing and moving around in `server_data/il` - remember you will need to click refresh in cyberduck regularly to see what's happening. Experiment with abandoning the experiment part-way through (i.e. closing the browser window) and see what happens. Look at the CSV data files that get created in various places, and check that the contents of the data files make sense and how they relate to what you see as a participant. Try to run a few generations of at least one chain and check that the iteration process works as you expect.
+### Run the basic `conferedate_priming.html` experiment and look at the CSV and audio data files it creates. Check you can access the audio, and that you can see how the audio and the trial list link up.
 
-No model answer here - hopefully you can see the language files shuttling about between `ready_to_iterate`, `undergoing_iteration` and `completed_iteration`. 
+You should find a data file called something like cp_a3fjy6ahr3.csv (where a3fjy6ahr3 is the random ID - yours will be different!), plus a bunch of audio files in the `audio` folder called a3fjy6ahr3_10.wav, a3fjy6ahr3_15.wav etc, one per recording you made when running through the experiment. The numbers in the recording names (10, 15, etc) correspond to the information in the trial_index column in the CSV data file.
 
-### How would you increase the number of training trials in the observation phase of the experiment to provide e.g. 6 passes through the training set? How would you increase or decrease the size of the transmission bottleneck?
+### Run it again and see where the data from the second run is stored - you may need to refresh your cyberduck window with the refresh button.
 
-The number of passes through the training set is specified in lines 592-595 of iterated_learning.js, when we use `build_training_timeline` to construct the training timeline. I have set it up just to present a single block of training:
+Every time you run it you are assigned a different random ID, so you get a separate data file and a separate set of recordings.
 
-```js
-var training_timeline = build_training_timeline(
-      training_object_label_pairs,
-      1 //this produces 1 block of training
-);
-```    
+### The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
 
-So if you want multiple passes through the training set, set this number to e.g. 6 and see what happens.
-
-The size of the transmission bottleneck (how many meaning-signal pairs our participants see in each block of training) is set just above there, on lines 589-491:
+You need to change the names of the sound files. In particular, our confederate in the base code produces a single overspecific description, which we create with the following command:
 
 ```js
-var training_object_label_pairs =
-      jsPsych.randomization.sampleWithoutReplacement(input_language, 14);
-```
-
-So there we are selecting 14 - change that to e.g. 5 or 20 and see what happens.
-
-### How would you randomise the order of the syllables on production trials separately for every production trial? Do you think that is better or worse? How about if you don't randomise them at all? Have a think about the possible consequences of these various randomisation choices.
-
-In the base version of the code we randomise the syllables once, when the experiment loads, on lines 235 onwards:
-
-```js
-var available_syllables = jsPsych.randomization.shuffle([
-  "ti",
-  "ta",
+var interaction_trials = [
   ...
-]);
-```
-
-As I explain in the code walk-through, I think this is a sensible way to do it because it means the structure of the syllable space is less obvious (the participants don't see the syllables enumerated in a really clear way), but it's not as annoying as randomising the label order on *every* trial. But you can play around with these other possibilities. First, to get no randomisation, just get rid of the shuffling entirely and see what you think of that:
-
-```js
-var available_syllables = [
-  "ti",
-  "ta",
+  //critical trial (confederate describes red sock using adjective)
+  make_picture_selection_trial("g4_c1_1", "g4_c1", "g2_c3"),
   ...
 ];
 ```
 
-To shuffle every production trial independently is a little more work - I have to edit my `make_production_trial` function:
+That's an overdescription because the two choices are a red sock ("g4_c1") and a green glove ("g2_c3"), so just saying "the sock" would be enough, and yet the confederate says "the red sock" (that's what the sound file "g4_c1_1" contains). So if we just change the sound file to one where she says "the sock", that will produce a minimally descriptive confederate. It turns out there are two suitable sound files, "g4_1" and "g4_2" (look in the `sounds` folder) so either of those will do. E.g. we can change that one line in constructing `interaction_trials` to
 
 ```js
-function make_production_trial(object_filename) {
-  //shuffle the syllables
-  var shuffled_syllables = jsPsych.randomization.shuffle(available_syllables) 
-  //add the DELETE and DONE buttons to the shuffled syllables syllables
-  var buttons = shuffled_syllables.concat(["DELETE", "DONE"]);
-  //...
-  //define what a single production trial looks like - this will loop
-  var single_production_trial = {
-    type: jsPsychImageButtonResponsePromptAboveButtons,
-    stimulus: object_filename,
-    stimulus_height: 150,
-    choices: buttons, //now I am using my shuffled buttons
-    //...
-  //then the rest as before
+var interaction_trials = [
+  ...
+  //critical trial (confederate describes red sock using adjective)
+  make_picture_selection_trial("g4_1", "g4_c1", "g2_c3"),
+  ...
+];
 ```
 
-This should ensure that I shuffle the buttons once, when I construct the production trial, and then every time we loop this trial the order will be the same, but each separate production trial will have its own randomisation.
+### Now try running the `conferedate_priming_readfromcsv.html` experiment - you don't have to work through the whole experiment, just a few trials! Again, check you can see your data on the server.
 
-### [Harder, optional] How could you insert a small number of test trials after each block of training trials, to keep the participant focussed on the task? 
+Nothing tricky here!
 
-[We already provided thoughts on how this could be done](oels_practical_wk10_extended.md) (which also covers the other harder questions). 
+### For this version of the experiment, how do you switch from an overspecific to minimally-specific confederate? (Hint: this involves changing the name of the file used by the `read_trials_and_prepare_timeline` function in the very last line of the code).
 
-### [Harder, optional] Can you add a maximum generation number, so no chain goes beyond e.g. 10 generations? 
+Hopefully at this point in the practical you figured out that the `read_trials_and_prepare_timeline` function at the end of the code takes a filename, either `overspecific_confederate.csv` or `minimal_confederate.csv`, and if you use a different filename you get a different kind of confederate. So at the moment the code loads the file for the overspecific confederate:
 
-[We already provided thoughts on how this could be done](oels_practical_wk10_extended.md).
+```js
+read_trials_and_prepare_timeline("overspecific_confederate.csv");
+```
 
-### - [Very hard, very optional] Can you implement a deduplication filter like that used by Beckner et al., to avoid presenting participants with ambiguous duplicate labels (where two distinct pictures map to the same label)? 
+And if we just change the file name it loads, we'll get the minimally specific confederate:
 
-This really was quite hard, [check out the model answer if you are curious](oels_practical_wk10_extended.md).
+```js
+read_trials_and_prepare_timeline("minimal_confederate.csv");
+```
+
+Note that this confederate *still uses colour adjectives when they are required*, which in this randomisation of the trial list happens in the first couple of trials - but they don't use them when they are not required, hence they are minimally specific and not underspecific.
+
+
+### Building on the previous question: how would you randomly allocate a participant to one of these two conditions, overspecific or minimally specific? 
+
+[We already provided thoughts on how this could be done](oels_practical_wk7_extended.md) (which also covers the harder question later on). 
+
+### For either of these experiments, figure out how to disable image preloading for the button images and re-run the experiment. Can you see the difference? If it works smoothly, try running the experiment in Chrome in Incognito mode, which prevents your browser saving images etc for you. Can you see the difference now?
+
+Our preloading is done by creating a preload trial and adding it to the timeline, so if you just delete the `preload` trial from the timeline that will disable preloading. E.g. in the basic `confederate_priming.js` code:
+
+```js
+var full_timeline = [].concat(
+  consent_screen,
+  audio_permission_instructions1,
+  audio_permission_instructions2,
+  preload, //delete or comment out this line to disable preloading!
+  write_headers,
+  pre_interaction_instructions,
+  interaction_trials,
+  final_screen
+);
+```
+
+If you delete the preloading you should see that you get a slight delay before the images appear, particularly if you are on a slow internet connection (e.g. tethering via your phone).
+
+### [Harder, optional] Can you change the `random_wait` function so it generates longer waits early in the experiment and shorter waits later on? 
+
+[We already provided thoughts on how this could be done](oels_practical_wk7_extended.md) 
 
 ## Re-use
 
