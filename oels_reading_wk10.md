@@ -1,11 +1,11 @@
 ---
-title: Week 9 reading
+title: Week 10 reading
 description: Least effort and Zipf's Law of Abbreviation
 ---
 
-## The plan for week 9
+## The plan for week 10
 
-For our final reading we are looking at Kanwal et al. (2017), which reports a single 4-condition experiment testing whether the Law of Abbreviation (frequent words have short labels, infrequent words have long labels) arises from a trade-off between accuracy and effort in communication, i.e. because people want to be understood but nonetheless minimise their effort. 
+For our final reading we are looking at Kanwal et al. (2017), which reports a single 4-condition experiment testing whether the Law of Abbreviation (frequent words have short labels, infrequent words have long labels) arises from a trade-off between accuracy and effort in communication, i.e. because people want to be understood but nonetheless minimise their effort. Kanwal was a PhD student in the Centre for Language Evolution, working with Simon Kirby, Kenny Smith, and me.
 
 As usual, in this week's practical you'll get a chance to look at a similar experiment in jsPsych, which will involve code from our week 4 word learning experiment again but also the infrastructure to run dyadic interaction experiments between web browsers.
 

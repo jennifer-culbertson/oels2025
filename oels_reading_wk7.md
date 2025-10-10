@@ -3,7 +3,7 @@ title: Week 7 reading
 description: Speech perception, social influences on phonetic adaptation
 ---
 
-## The plan for week 6
+## The plan for week 7
 
 This week we are looking at Lev-Ari (2017). This paper reports an online perceptual learning experiment, where participants are exposed to manipulated speech (featuring weird /d/ or /t/ phonemes with an unusual Voice Onset Time, VOT) and then tested on a categorization task where they hear words spoken by the same speaker or a new speaker featuring ambiguous /d/-/t/ sounds and have to categorise those sounds as /d/ or /t/. The basic result is that the manipulated speech input influences how those sounds are perceived; the interesting new twist is that the level of phonetic adaptation appears to depend on the participants' social network size, with individuals with small social networks being more strongly influenced by the manipulated speech. As usual, in this week's practical you'll get a chance to look at a similar experiment in jsPsych, which will give you some experience of dealing with audio stimuli.
 

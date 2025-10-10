@@ -1,9 +1,9 @@
 ---
-title: Week 10 reading/practical
+title: Week 11 reading/practical
 description: How to set up a server, launch and pay participants, manage qualifications
 ---
 
-## The plan for week 10
+## The plan for week 11
 
 We are basically done with the course - by this point you have read a bunch of papers using online data collection, had the opportunity to build your own (simple) jsPsych experiments, and to play with our implementations to give you a feeling for how those experiments look under the hood (plus, hopefully, some code building blocks to get you started building your own experiments). But there are a number of other steps you have to go through to make your experiment available on the open web and start collecting actual data. In this document I will talk you through those steps, and also give some advice based on my experience of running stuff online.
 
