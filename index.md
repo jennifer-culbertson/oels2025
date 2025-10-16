@@ -84,7 +84,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - *Technical content:* using trial data for contingent trials, saving data
 - [Reading](oels_reading_wk6.md) 
 - [Programming task](oels_practical_wk6.md)
-<!-- - [Lecture slides](slides/oels_lecture_wk6.pdf)  -->
+- [Lecture slides](slides/oels_lecture_wk6.pdf)
 
 ### Week 7 (27th October): Audio stimuli
 
