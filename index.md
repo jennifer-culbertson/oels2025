@@ -90,33 +90,33 @@ Each week there will be a set reading and a programming assignment. The reading 
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Audio, trial data again, preloading stimuli, saving data trial by trial
-<!-- - [Reading](oels_reading_wk6.md) -->
-<!-- - [Programming task](oels_practical_wk6.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk6.pdf) -->
+- [Reading](oels_reading_wk7.md) 
+- [Programming task](oels_practical_wk7.md) 
+- [Lecture slides](slides/oels_lecture_wk7.pdf) 
 
 ### Week 8 (3rd November): Priming and overspecification
 
 - *Scientific content:* Priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, conditional timelines, reading trial lists from CSV
-<!-- - [Reading](oels_reading_wk7.md) -->
-<!-- - [Programming task](oels_practical_wk7.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk7.pdf)  -->
+<!-- - [Reading](oels_reading_wk8.md) -->
+<!-- - [Programming task](oels_practical_wk8.md) -->
+<!-- - [Lecture slides](slides/oels_lecture_wk8.pdf)  -->
 
 ### Week 9 (10th November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
-<!-- - [Reading](oels_reading_wk8.md) -->
-<!-- - [Programming task](oels_practical_wk8.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk8.pdf) -->
+<!-- - [Reading](oels_reading_wk9.md) -->
+<!-- - [Programming task](oels_practical_wk9.md) -->
+<!-- - [Lecture slides](slides/oels_lecture_wk9.pdf) -->
 
 ### Week 10 (17th November): Participant-to-participant interaction
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
-<!-- - [Reading](oels_reading_wk9.html) -->
-<!-- - [Programming task](oels_practical_wk9.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk9.pdf) -->
+<!-- - [Reading](oels_reading_wk10.html) -->
+<!-- - [Programming task](oels_practical_wk10.md) -->
+<!-- - [Lecture slides](slides/oels_lecture_wk10.pdf) -->
 
 ### Extra material: Interacting with servers and crowdsourcing sites
 
