@@ -614,7 +614,7 @@ Being able to specify your trial list ahead of time and save it as a CSV file ca
 
 ## Exercises with the confederate priming experiment code
 
-Attempt these problems. Once you have had a go, you can [look at our notes](oels_practical_wk7_notes.md) which will be available after class.
+Attempt these problems. Once you have had a go, you can [look at our notes](oels_practical_wk8_notes.md) which will be available after class.
 - Run the basic `confederate_priming.html` experiment and look at the CSV and audio data files it creates. Check you can access the audio, and that you can see how the audio and the trial list link up - how do you know which audio corresponds to which trial in the CSV?
 - Run it again and see where the data from the second run is stored - you may need to refresh your cyberduck window with the refresh button.
 - The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
