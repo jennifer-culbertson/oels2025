@@ -269,6 +269,7 @@ function make_production_trial(object, labels) {
       //subtrial 1: show the two labelled buttons and have the participant select
       {
         choices: [], //dummy choices to be over-written on_start
+        save_trial_parameters: {choices: true}, //and we want to save the trial choices
         //at the start of the trial, randomise the left-right order of the labels
         //and note that randomisation in data as label_choices
         on_start: function (trial) {
