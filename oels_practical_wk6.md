@@ -269,6 +269,7 @@ function make_production_trial(object, labels) {
       //subtrial 1: show the two labelled buttons and have the participant select
       {
         choices: [], //dummy choices to be over-written on_start
+        data: { block: "production" }, 
         save_trial_parameters: {choices: true}, //and we want to save the trial choices
         //at the start of the trial, randomise the left-right order of the labels
         //and note that randomisation in data as label_choices
@@ -276,16 +277,12 @@ function make_production_trial(object, labels) {
           var shuffled_labels =
             jsPsych.randomization.shuffle(labels);
           trial.choices = shuffled_labels;
-          trial.data = {
-            block: "production",
-            label_choices: shuffled_labels,
-          };
         },
         //at the end of the trial, use data.response to figure out
         //which label they selected, and add that to data
         on_finish: function (data) {
           var button_number = data.response;
-          data.label_selected = data.label_choices[button_number];
+          data.label_selected = data.choices[button_number];
         },
       },
       //subtrial 2: show the image plus selected label, make the participant click that label
