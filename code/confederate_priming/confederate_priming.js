@@ -180,10 +180,6 @@ the mic happens through a pop-up in the browser, but we warn them it is coming.
 For selecting their mic (which also initialises it) we can use the 
 jsPsychInitializeMicrophone plugin. 
 
-The code for saving the audio responses in in utilities.js, it works in essentially 
-the same way as the usual save_data function. Fort each participant audio response 
-it constructs a filename for the saved audio, which will consist of the participant ID 
-and a unique number identifier corresponding to the current trial index.
 */
 
 //A simple warning that they are going to have to grant access to the mic
@@ -274,8 +270,8 @@ function make_picture_description_trial(target_image, foil_image) {
             target: target_image, //and record target and foil images
             foil: foil_image}, 
 
-    on_finish: function (data) {      
-      save_audio(data); //save the audio using the function in utilities.js
+    on_finish: function (data) {  
+      //console.log(data.response) // uncomment this if you want to see what the encrypted audio data looks like
       save_confederate_priming_data(data);
     },
   };
@@ -293,6 +289,17 @@ function make_picture_description_trial(target_image, foil_image) {
   };
   return full_trial;
 }
+
+/*
+A note on saving audio data:
+
+In an html-audio-response trial, we are collecting an audio recording from the participant.
+It would therefore be sensible if the data we collected from these trials was an audio recording, i.e. a .wav or .mp3 file.
+However, to conserve storage space, jsPsych instead saves the audio-response as a very long, encrypted string (i.e a series of
+numbers and letters) that represents the audio. This can be transformed back into an audio file by the researcher at a later date.
+For now, we are just saving that encrypted string into the participant's CSV file - just like we would save any other kind of response.
+)
+*/
 
 
 /******************************************************************************/
@@ -366,7 +373,7 @@ var write_headers = {
     var this_participant_filename = "cp_" + participant_id + ".csv";
     save_data(
       this_participant_filename,
-      "participant_id,trial_index,participant_task,time_elapsed,sound_file,target_image,foil_image,button_choice0,button_choice1,response,button_selected,rt\n"
+      "participant_id,trial_index,participant_task,time_elapsed,sound_file,target_image,foil_image,button_choice0,button_choice1,button_selected,response,rt\n"
     );
   },
 };
@@ -488,10 +495,10 @@ This is a slightly modification to Alisdair's save_data_line code. Note that dat
 save to a file named cp_ID.csv, where cp stands for confederate priming and ID is
 the randomly-generated participant ID.
 
-We have to check which trial type we are selecting data for, since picture_description 
-trials lack a button_selected entry. There's also no point 
-saving the data.response info for picture_description trials, since it just indicates 
-the participant clicking on the mic button, so we will save "NA" for those missing values.
+We have to check which trial type we are selecting data for, since not all of our trials have
+the same data entries. For example, picture_description trials lack button_selected entry, since
+the participant is not choosing between two buttons in those trials. We can just write "NA" in those
+entries instead.
 
 */
 function save_confederate_priming_data(data) {
@@ -506,8 +513,8 @@ function save_confederate_priming_data(data) {
       "NA",
       "NA", //'missing' target and foil image
       data.choices,
-      data.response,
       data.button_selected,
+      data.response,
       data.rt,
     ];
   } else if (data.participant_task == "picture_description") {
@@ -521,9 +528,10 @@ function save_confederate_priming_data(data) {
       data.foil,
       "NA",
       "NA", //'missing' choices for description trials
-      "NA", //'missing' data.response
       "NA", //'missing' button_selected
+      data.response, // an encrypted string that represents the recorded audio
       data.rt,
+      
     ];
   }
   // join these with commas and add a newline
