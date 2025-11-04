@@ -66,6 +66,9 @@ Picture selection trials in our implementation work in essentially the same way 
 
 The main part of the picture description trial is an `html-audio-response` trial (with an `html-button-response` trial beforehand, so the participant clicks on a mic button to enter the audio response trial and start recording). One reason we are using `html-audio-response` (i.e. an html stimulus, even though our stimulus involves images) is that that's the only audio response plugin currently available in jsPsych! There is no `image-audio-response` plugin yet, although I imagine that will be added at some point. But in fact it works out quite nicely, because our picture description trials involve presenting two side-by-side images, one highlighted with a green box, and it turns out it is easier to do this using an html stimulus rather than an image stimulus - this is explained below! Since the `html-audio-response` is new it's not quite as slick as the more established plugins, which means things look a little scrappy. It's not disastrous, but if you wanted a different way to record audio you could consult [the equivalent practical from the 2022 version of the course](https://kennysmithed.github.io/oels2022/oels_practical_wk8.html), which doesn't use the audio response plugin.
 
+Note that (to conserve storage space) jsPsych instead saves audio-responses as a very long, encrypted strings (i.e a series of
+numbers and letters) that represent the audio. These strings can be transformed back into an audio file later (see below for details). 
+
 We will also simulate the confederate preparing to speak and making a selection based on the participant's productions by inserting variable-duration delays at appropriate points. The full experiment also included disfluencies etc (you can see some of the sound files for those if you go digging in the `sounds` folder) but we'll keep it simple here.
 
 
@@ -210,7 +213,7 @@ Later on we will use this `make_picture_selection_trial` function to create pict
 
 ### Picture description trials
 
-These involve the participant recording an audio description of a target image. Before we can do any audio recording we have to get the participant to grant us mic access, and have them select a mic. This is all in the code in the section "Infrastructure for recording audio", you can look there if you want to see how it's done. There is also a `save_audio` function defined in the `utilities.js` file, I'll explain its key features below and you can treat it as a black box or look at the details as you prefer.
+These involve the participant recording an audio description of a target image. Before we can do any audio recording we have to get the participant to grant us mic access, and have them select a mic. This is all in the code in the section "Infrastructure for recording audio", you can look there if you want to see how it's done.
 
 Once the audio stuff is set up we create our picture description trials - remember, for these the participant sees two images side by side, with the target highlighted by a green box, clicks a button to start recording a description, clicks again to stop recording, and then "waits for their partner to make a picture selection" based on their description (in reality, the participant just gets a waiting message and waits for a random time). This can be achieved with a 3-part timeline: the initial part of the trial where the participant sees the pair of images and clicks a button to start recording, then the second part where they speak and then click again to stop recording, then the random wait. 
 
@@ -279,7 +282,6 @@ function make_picture_description_trial(target_image, foil_image) {
             foil: foil_image}, 
 
     on_finish: function (data) {      
-      save_audio(data); //save the audio using the function in utilities.js
       save_confederate_priming_data(data);
     },
   };
@@ -360,7 +362,7 @@ var picture_plus_white_mic = {
 
 The participant's `choices` on this trial is just the mic button - we use the `mic` image file, which is in the `images` folder, and do a little bit of formatting so the mic image appears with a white background (which we'll change below to orange to indicate they are recording).
 
-When the participant is ready they click the mic button, which progresses them to the next trial. This is where the action happens: it's an audio response trial, so the audio is recorded for us, and we indicate they are recording by turning the mic button orange. When they click the mic button again the trial will end, stopping the recording, and we save the trial data *and* the audio recording. The code for all that looks like this:
+When the participant is ready they click the mic button, which progresses them to the next trial. This is where the action happens: it's an audio response trial, so the audio is recorded for us, and we indicate they are recording by turning the mic button orange. When they click the mic button again the trial will end, stopping the recording, and we save the trial data *including* the audio recording (as a string). The code for all that looks like this:
 
 ```js
  var record_audio = {
@@ -374,7 +376,6 @@ When the participant is ready they click the mic button, which progresses them t
             foil: foil_image}, 
 
     on_finish: function (data) {      
-      save_audio(data); //save the audio using the function in utilities.js
       save_confederate_priming_data(data);
     },
   };
@@ -386,7 +387,6 @@ Finally, when the participant is done talking they click the mic button again to
 
 ```js
 on_finish: function (data) {      
-      save_audio(data); //save the audio using the function in utilities.js
       save_confederate_priming_data(data);
     },
 ```
@@ -412,7 +412,7 @@ Finally, we add the third sub-trial, a very simple waiting message using the ran
 }
 ```
 
-The only other thing we have to explain is the `save_audio` function. The code is hidden away in `utilities.js` - this is very similar to our `save_data` function, but it's worth knowing how it generates the file names it uses to save the audio. We use file names of the form id_index.wav, where id is the random `participant_id` we generated and index is the `trial_index`. Every piece of trial data in jsPsych has an index (0 for the first trial in the experiment, e.g. the initial consent screen, 1 for the next trial, etc), and we write those trial indexes in our CSV file, so if we include the same index in the recording name we can work out which recording goes with which trial in our CSV. If you run through the experiment and look in the `server_data/audio` folder you should see what the file names look like, and be able to listen to yourself!
+<!-- The only other thing we have to explain is the `save_audio` function. The code is hidden away in `utilities.js` - this is very similar to our `save_data` function, but it's worth knowing how it generates the file names it uses to save the audio. We use file names of the form id_index.wav, where id is the random `participant_id` we generated and index is the `trial_index`. Every piece of trial data in jsPsych has an index (0 for the first trial in the experiment, e.g. the initial consent screen, 1 for the next trial, etc), and we write those trial indexes in our CSV file, so if we include the same index in the recording name we can work out which recording goes with which trial in our CSV. If you run through the experiment and look in the `server_data/audio` folder you should see what the file names look like, and be able to listen to yourself! -->
 
 ### Building the interaction timeline
 
@@ -615,7 +615,7 @@ Being able to specify your trial list ahead of time and save it as a CSV file ca
 ## Exercises with the confederate priming experiment code
 
 Attempt these problems. Once you have had a go, you can [look at our notes](oels_practical_wk8_notes.md) which will be available after class.
-- Run the basic `confederate_priming.html` experiment and look at the CSV and audio data files it creates. Check you can access the audio, and that you can see how the audio and the trial list link up - how do you know which audio corresponds to which trial in the CSV?
+- Run the basic `confederate_priming.html` experiment and look at the CSV files it creates. If you want, have a look at the notes below and try decoding one of the audio strings.
 - Run it again and see where the data from the second run is stored - you may need to refresh your cyberduck window with the refresh button.
 - The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
 - Now try running the `conferedate_priming_readfromcsv.html` experiment - you don't have to work through the whole experiment, just a few trials! Again, check you can see your data on the server.
@@ -624,6 +624,10 @@ Attempt these problems. Once you have had a go, you can [look at our notes](oels
 - For either of these experiments, figure out how to disable image preloading for the button images and re-run the experiment. Can you see the difference? If it works smoothly, try running the experiment in Chrome in Incognito mode, which prevents your browser saving images etc for you. Can you see the difference now?
 - [Harder, optional] Can you change the `random_wait` function so it generates longer waits early in the experiment and shorter waits later on? Once you have attempted this, you can look at [my thoughts on how it could be done](oels_practical_wk7_extended.md).
 
+## More about recording audio in jspsych
+Once you have the audio data as a base 64 string, you can convert each string to an audio file using R [example code here](https://github.com/jspsych/jsPsych/discussions/796#discussioncomment-33705) or Python [example code here](https://github.com/jspsych/jsPsych/issues/494#issuecomment-705674385), or using an online base64-to-audio converter (e.g., this)[https://base64.guru/converter/decode/audio] (the latter is useful for testing, but I don't recommend using this with data from real participants for data privacy reasons). 
+
+Base 64 strings are *very* long, so if you are recording audio in a real experiment, take the advice given on the (html-audio-response plugin page)[https://www.jspsych.org/v7/plugins/html-audio-response/]: save the base 64 strings from each trial to your server immediately, and delete it from the data string that jspych automatically accumulates across the trials.
 
 ## References
 
