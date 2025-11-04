@@ -142,13 +142,10 @@ some help with your final assignment code. Obviously we won't write your code fo
 an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. 
 Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of 
 questions, then go away. The exact dates and times will be added here in due course...
-<!-- - Wednesday 20th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.-->
-<!-- - Wednesday 20th November, 1.30pm-3.00pm, DSB 1.08, with Kenny. -->
-<!-- - Monday 25th November, 11am-12, DSB 1.08, with Kenny. -->
-<!-- - Monday 25th November, 2pm-3pm, DSB 1.08, with Kenny. -->
-<!-- - Wednesday 27th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun. -->
-<!-- - Tuesday 3rd December, 1.30pm-3pm, DSB 1.08, with Kenny. -->
-<!-- - Wednesday 4th December, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Maisy.  -->
+<!-- - Monday 24th November, 11am-12, Room TBA, with Jenny. -->
+<!-- - Thursday 27th November, 12-2pm, Appleton Tower room M2 (i.e. usual time and place), with Maisy/Shuya. -->
+<!-- - Monday 1st December, 11am-12, Room TBA, with Jenny. -->
+<!-- - Tuesday 2nd December, time and room TBA, with Maisy/Shuya. -->
 
 ## Re-use
 
