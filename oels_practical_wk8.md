@@ -615,6 +615,7 @@ Being able to specify your trial list ahead of time and save it as a CSV file ca
 
 Attempt these problems. Once you have had a go, you can [look at our notes](oels_practical_wk8_notes.md) which will be available after class.
 - Run the basic `confederate_priming.html` experiment and look at the CSV files it creates. If you want, have a look at the notes below and try decoding one of the audio strings (e.g., using the web-based tool linked there).
+- Run the experiment a second time and check the CSV file again. What do you notice?
 - The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
 - Now try running the `conferedate_priming_readfromcsv.html` experiment - you don't have to work through the whole experiment, just a few trials! Again, check you can see your data on the server.
 - For this version of the experiment, how do you switch from an overspecific to minimally-specific confederate? (Hint: this involves changing the name of the file used by the `read_trials_and_prepare_timeline` function in the very last line of the code).

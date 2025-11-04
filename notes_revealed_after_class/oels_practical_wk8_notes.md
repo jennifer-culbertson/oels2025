@@ -5,11 +5,11 @@ description: Some notes on answers to the practical questions
 
 ### Run the basic `conferedate_priming.html` experiment and look at the CSV and audio data files it creates. Check you can access the audio, and that you can see how the audio and the trial list link up.
 
-You should find a data file called something like cp_a3fjy6ahr3.csv (where a3fjy6ahr3 is the random ID - yours will be different!), plus a bunch of audio files in the `audio` folder called a3fjy6ahr3_10.wav, a3fjy6ahr3_15.wav etc, one per recording you made when running through the experiment. The numbers in the recording names (10, 15, etc) correspond to the information in the trial_index column in the CSV data file.
+You should find a data file called something like cp_a3fjy6ahr3.csv (where a3fjy6ahr3 is the random ID - yours will be different!). Within this data, you will see long strings corresponding to the audio recordings. If you open the CSV files using excel, they may act weird -- the long strings might be displayed broken over two lines. But if you open the CSV using VS Code (or whatever other software you use that can open such files raw), then you will see the strings properly. You can copy the string, and paste it into a free conversion website like (this one)[https://base64.guru/converter/decode/audio]. If you do that, you should hear the audio!
 
 ### Run it again and see where the data from the second run is stored - you may need to refresh your cyberduck window with the refresh button.
 
-Every time you run it you are assigned a different random ID, so you get a separate data file and a separate set of recordings.
+Every time you run it you are assigned a different random ID, so you get a separate data file.
 
 ### The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
 
@@ -58,7 +58,7 @@ Note that this confederate *still uses colour adjectives when they are required*
 
 ### Building on the previous question: how would you randomly allocate a participant to one of these two conditions, overspecific or minimally specific? 
 
-[We already provided thoughts on how this could be done](oels_practical_wk7_extended.md) (which also covers the harder question later on). 
+[We already provided thoughts on how this could be done](oels_practical_wk8_extended.md) (which also covers the harder question later on). 
 
 ### For either of these experiments, figure out how to disable image preloading for the button images and re-run the experiment. Can you see the difference? If it works smoothly, try running the experiment in Chrome in Incognito mode, which prevents your browser saving images etc for you. Can you see the difference now?
 
@@ -81,7 +81,7 @@ If you delete the preloading you should see that you get a slight delay before t
 
 ### [Harder, optional] Can you change the `random_wait` function so it generates longer waits early in the experiment and shorter waits later on? 
 
-[We already provided thoughts on how this could be done](oels_practical_wk7_extended.md) 
+[We already provided thoughts on how this could be done](oels_practical_wk8_extended.md) 
 
 ## Re-use
 
