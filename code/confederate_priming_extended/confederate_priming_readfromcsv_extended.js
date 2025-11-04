@@ -199,7 +199,6 @@ function make_picture_description_trial(target_image, foil_image) {
             foil: foil_image}, 
 
     on_finish: function (data) {      
-      save_audio(data); //save the audio using the function in utilities.js
       save_confederate_priming_data(data);
     },
   };
