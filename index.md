@@ -106,7 +106,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
-<!-- - [Reading](oels_reading_wk9.md) -->
+- [Reading](oels_reading_wk9.md)
 <!-- - [Programming task](oels_practical_wk9.md) -->
 <!-- - [Lecture slides](slides/oels_lecture_wk9.pdf) -->
 
