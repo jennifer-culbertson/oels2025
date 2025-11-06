@@ -1,5 +1,5 @@
 ---
-title: Week 7 practical, notes
+title: Week 8 practical, notes
 description: Some notes on answers to the practical questions
 ---
 
