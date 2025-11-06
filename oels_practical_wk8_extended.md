@@ -77,7 +77,7 @@ jsPsych.getProgress().current_trial_global
 
 See [the documentation for jsPsych.getProgress](https://www.jspsych.org/v8/reference/jspsych/#jspsychgetprogress) - this counter will increase with every trial (including e.g. instruction screens etc) so it might require a bit more thought to decide how the trial counter should relate to the length of the random wait, but it's another way to do it.
 
-<!-- The only additional complexity here is that we can't set the random wait durations at the time of building the experiment timeline, as we were doing previously - before the experiment begins, the `wait_counter` (or the `current_trial_global`) will be 0, because we haven't run any trials. So instead we have to generate the random wait when we are ready to start the trial. The way to do that is as follows:
+The only additional complexity here is that we can't set the random wait durations at the time of building the experiment timeline, as we were doing previously - before the experiment begins, the `wait_counter` (or the `current_trial_global`) will be 0, because we haven't run any trials. So instead we have to generate the random wait when we are ready to start the trial. The way to do that is as follows:
 
 ```js
 var waiting_for_partner = {
@@ -87,7 +87,7 @@ var waiting_for_partner = {
     trial_duration: function () {return random_wait()}, 
     post_trial_gap: 500, //short pause after the confederate makes their selection
   };
-``` -->
+```
 
 So `trial_duration` is not a fixed value, but a function call that runs when the trial actually runs. You could achieve the same sort of effect by setting the duration in the wait trial's `on_start`.
 
