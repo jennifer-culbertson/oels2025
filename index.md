@@ -144,8 +144,8 @@ Note that these are not compulsory, and they are drop-ins not extra labs - the i
 questions, then go away. The exact dates and times will be added here in due course...
 - Monday 24th November, 11am-12, 40 George Square Lower Teaching Hub (i.e. usual time and place), with Jenny and Maisy.
 - Thursday 27th November, 12-2pm, Appleton Tower room M2 (i.e. usual time and place), with Jenny and Shuya.
-- Monday 1st December, 11am-12, Room TBA, with Jenny and Shuya.
-- Tuesday 2nd December, 12-2pm, Room TBA, with Jenny and Shuya. -->
+- Monday 1st December, 11am-12, DSB 1.17, with Jenny and Shuya.
+- Tuesday 2nd December, 12-2pm, DSB 1.20, with Jenny and Shuya. -->
 
 ## Re-use
 
