@@ -107,8 +107,8 @@ Each week there will be a set reading and a programming assignment. The reading 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
 - [Reading](oels_reading_wk9.md)
-<!-- - [Programming task](oels_practical_wk9.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk9.pdf) -->
+- [Programming task](oels_practical_wk9.md)
+- [Lecture slides](slides/oels_lecture_wk9.pdf)
 
 ### Week 10 (17th November): Participant-to-participant interaction
 
@@ -124,7 +124,7 @@ No lecture or lab this week, but there are some materials that will be useful fo
 
 - *Scientific content:* None!
 - *Technical content:* How to set up a server, launch and pay participants on Prolific and MTurk, etc.
-<!-- - [How to get your experiment online](oels_wk10.md) -->
+<!-- - [How to get your experiment online](oels_wk11.md) -->
 
 
 ### More bonus content
@@ -142,10 +142,10 @@ some help with your final assignment code. Obviously we won't write your code fo
 an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. 
 Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of 
 questions, then go away. The exact dates and times will be added here in due course...
-<!-- - Monday 24th November, 11am-12, Room TBA, with Jenny. -->
-<!-- - Thursday 27th November, 12-2pm, Appleton Tower room M2 (i.e. usual time and place), with Maisy/Shuya. -->
-<!-- - Monday 1st December, 11am-12, Room TBA, with Jenny. -->
-<!-- - Tuesday 2nd December, time and room TBA, with Maisy/Shuya. -->
+- Monday 24th November, 11am-12, 40 George Square Lower Teaching Hub (i.e. usual time and place), with Jenny and Maisy.
+- Thursday 27th November, 12-2pm, Appleton Tower room M2 (i.e. usual time and place), with Jenny and Shuya.
+- Monday 1st December, 11am-12, Room TBA, with Jenny and Shuya.
+- Tuesday 2nd December, 12-2pm, Room TBA, with Jenny and Shuya. -->
 
 ## Re-use
 
