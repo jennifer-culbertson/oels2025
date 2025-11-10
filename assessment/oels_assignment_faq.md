@@ -52,7 +52,7 @@ Yes! This year, we are going to using a rubric to help us mark your assessments.
 > 1. Experiment report 
 > - Is it clear how the research question relates to/is motivated by previous literature?
 > - Is there a clear [hypothesis](https://www.trentu.ca/academicskills/how-guides/how-succeed-math-and-science/writing-lab-reports/understanding-hypotheses-and) behind your research question, i.e., what high-level theory, or idea are you interested in, and what [prediction](https://www.trentu.ca/academicskills/how-guides/how-succeed-math-and-science/writing-lab-reports/understanding-hypotheses-and) from this theory/idea are you testing with your experiment?
-> Have you thought critically about the design/method that you used?
+> - Have you thought critically about the design/method that you used?
 >
 >  2. Experiment code
 >  - Does it work?
