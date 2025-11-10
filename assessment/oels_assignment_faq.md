@@ -43,6 +43,22 @@ Yes! Here are 2 high-scoring assignments from the 2023 class, plus the marker no
 - [Example 1 report](ProgrammingReportExample1.pdf). [Example 1 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example1/Example1.html)
 - [Example 2 report](ProgrammingReportExample2.pdf). [Example 2 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example2/Example2.html).
 
+### These examples are from a few years ago...has anything changed?
+
+Yes! This year, we are going to using a rubric to help us mark your assessments. Here it is:
+
+> #### Marking rubric
+>
+> 1. Experiment report 
+> - Is it clear how the research question relates to/is motivated by previous literature?
+> - Is there a clear [hypothesis](https://www.trentu.ca/academicskills/how-guides/how-succeed-math-and-science/writing-lab-reports/understanding-hypotheses-and) behind your research question, i.e., what high-level theory, or idea are you interested in, and what [prediction](https://www.trentu.ca/academicskills/how-guides/how-succeed-math-and-science/writing-lab-reports/understanding-hypotheses-and) from this theory/idea are you testing with your experiment?
+> Have you thought critically about the design/method that you used?
+>
+>  2. Experiment code
+>  - Does it work?
+>  - Have you gone beyond the code provided by us? For example, have you used new plugins/response types/functions, have you combined pieces of code in new ways, etc.?
+>  - Does it look nice? 
+
 
 ###  Once I have built my experiment, am I supposed to collect actual data from participants?
 
