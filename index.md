@@ -114,9 +114,9 @@ Each week there will be a set reading and a programming assignment. The reading 
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
-<!-- - [Reading](oels_reading_wk10.html) -->
+- [Reading](oels_reading_wk10.html)
 <!-- - [Programming task](oels_practical_wk10.md) -->
-<!-- - [Lecture slides](slides/oels_lecture_wk10.pdf) -->
+- [Lecture slides](slides/oels_lecture_wk10.pdf)
 
 ### Extra material: Interacting with servers and crowdsourcing sites
 
